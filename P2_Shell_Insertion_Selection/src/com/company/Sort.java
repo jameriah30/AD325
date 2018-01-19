@@ -90,9 +90,20 @@ public class Sort {
 
    //Method to print shell sort
     public static void printShellSort(){
-        int arr[] = new int[1000];
-        for(int i = 0; i < 1000; i++){
-            arr[i] = (int)(Math.random()*1000);
+        Random rgen = new Random();  // Random number generator
+        int[] arr = new int[100000];  //array to store 100000 random integers (1-100,000)
+
+        //--- Initialize the array to the ints 1-10,000
+        for (int i=0; i<arr.length; i++) {
+            arr[i] = i;
+        }
+
+        //--- Shuffle by exchanging each element randomly
+        for (int i=0; i<arr.length; i++) {
+            int randomPosition = rgen.nextInt(arr.length);
+            int temp = arr[i];
+            arr[i] = arr[randomPosition];
+            arr[randomPosition] = temp;
         }
 
         System.out.println("Array before Shell sort");
@@ -117,9 +128,25 @@ public class Sort {
     //Method to print shell sort
     public static void printInsertionSort(){
 
-        int arr[] = new int[1000];
-        for(int i = 0; i < 1000; i++){
-            arr[i] = (int)(Math.random()*1000);
+//        int arr[] = new int[1000];
+//        for(int i = 0; i < 1000; i++){
+//            arr[i] = (int)(Math.random()*1000);
+//        }
+
+        Random rgen = new Random();  // Random number generator
+        int[] arr = new int[100000];  //array to store 100000 random integers (1-100,000)
+
+        //--- Initialize the array to the ints 1-10,000
+        for (int i=0; i<arr.length; i++) {
+            arr[i] = i;
+        }
+
+        //--- Shuffle by exchanging each element randomly
+        for (int i=0; i<arr.length; i++) {
+            int randomPosition = rgen.nextInt(arr.length);
+            int temp = arr[i];
+            arr[i] = arr[randomPosition];
+            arr[randomPosition] = temp;
         }
 
         System.out.println("Array before Insertion Sort");
@@ -142,9 +169,20 @@ public class Sort {
     //Method to print shell sort
     public static void printSelectionSort(){
 
-        int arr[] = new int[1000];
-        for(int i = 0; i < 1000; i++){
-            arr[i] = (int)(Math.random()*1000);
+        Random rgen = new Random();  // Random number generator
+        int[] arr = new int[100000];  //array to store 100000 random integers (1-100,000)
+
+        //--- Initialize the array to the ints 1-10,000
+        for (int i=0; i<arr.length; i++) {
+            arr[i] = i;
+        }
+
+        //--- Shuffle by exchanging each element randomly
+        for (int i=0; i<arr.length; i++) {
+            int randomPosition = rgen.nextInt(arr.length);
+            int temp = arr[i];
+            arr[i] = arr[randomPosition];
+            arr[randomPosition] = temp;
         }
 
         System.out.println("Array before Selection Sort");
